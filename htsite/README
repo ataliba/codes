@@ -1,0 +1,26 @@
+htsite.
+Programa simples para geracao de paginas html.
+Projeto desenvolvido para auxiliar na pagina do Unsekurity Scene.
+
+Enviem criticas, sugestoes e comentarios para plex15@linuxbr.com.br
+
+o htsite usa uma 'linguagem' simples propria.
+vc cria um arquivo html, mas nas partes aonde se precisa repitir
+muitas vezes algum trexo(tabela, por exemplo) e voce soh precisa
+mudar o conteudo, o htsite eh bastante util.
+
+Leia doc.txt para mais informacao :)
+
+Agradecimentos a Unsekurity Scene e lucipher(pelo list.c)
+
+http://htsr0x.virtualave.net/outros/projects/htsite
+
+htsite 0.3
+* quando executado sem argumentos, ira atualizar pela lista htsite.txt
+  ou recebe 2 argumentos(arquivo fonte e alvo)
++ mostra quais arquivos estao sendo atualizados
++ %% na format string imprime apenas %
+
+htsite 0.4
++ eh capaz de ordenar o conteudo em ordem alfabetica
+* corrigidos alguns bugs pequenos

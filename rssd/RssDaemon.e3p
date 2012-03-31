@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-3.7.dtd">
+<!-- Project file for project RssDaemon -->
+<!-- Saved: 2005-11-12, 00:35:44 -->
+<!-- Copyright (C) 2005 Ataliba Teixeira, ataliba@ataliba.eti.br -->
+<Project version="3.7">
+  <ProgLanguage mixed="0">Python</ProgLanguage>
+  <UIType>Qt</UIType>
+  <Description>Software desenvolvido para monitorar um certo número de feeds e quando encontrar nestes feeds uma palavra que esteja em um pequeno db desenvolvido pelo usuário, remete um email com o post dentro dele e referências, caso o usuário queira visitá-lo.</Description>
+  <Version>0.1</Version>
+  <Author>Ataliba Teixeira</Author>
+  <Email>ataliba@ataliba.eti.br</Email>
+  <Sources>
+    <Source>
+      <Name>rssd.py</Name>
+    </Source>
+    <Source>
+      <Name>daemon.py</Name>
+    </Source>
+    <Source>
+      <Name>rssparser.py</Name>
+    </Source>
+  </Sources>
+  <Forms>
+  </Forms>
+  <Translations>
+  </Translations>
+  <Interfaces>
+  </Interfaces>
+  <Others>
+  </Others>
+  <MainScript>
+    <Name>rssd.py</Name>
+  </MainScript>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+</Project>

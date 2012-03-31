@@ -1,0 +1,183 @@
+HTSITE
+
+1 - O que eh htsite ?
+1.1 - Como funciona o htsite.
+
+2 - Como usar o htsite.
+2.1 - Arquivo de Lista
+
+3 - Banco de dados .
+3.1 - Funcionamento do banco de dados.
+3.2 - Modelo.
+
+4 - 'Tag' .
+4.1 - Funcao printall.
+4.2 - Ordem alfabetica.
+4.3 - Format string de printall.
+
+5 - Exemplo pratico.
+
+
+
+
+1 -  O que eh htsite ?
+
+O htsite eh uma ferramenta para console que foi criada para
+facilitar o trabalho de atualizacao de paginas.
+
+
+
+1.1 - Como funciona o htsite.
+
+O htsite faz a simples tarefa de repetir.
+Ele eh capaz de repetir um pedaco de html varias vezes modificando, a cada
+repeticao, apenas o que o usuario querer.
+Sera necessario um banco de dados simples para cada tipo de conteudo e
+um codigo html modificado com as funcoes do htsite.
+
+
+
+2 - Como usar o htsite.
+
+Htsite recebe argumentos na linha de comando.
+uso:
+htsite (-l)(-h) -i [arquivo] (-t [arquivo])
+-i [arquivo] especifica o nome do arquivo de entrada.
+-t [arquivo] especifica o nome do arquivo de saida(omita este
+  argumento para stdout ou quando em modo lista)
+-l faz com que htsite seja executado em modo lista. argumento -t deve ser
+   omintido e o arquivo especificado em -i deve ser um arquivo de lista.
+-h mostra a ajuda rapida e sai.
+
+
+2.1 - Arquivo de lista.
+
+Quando temos muitos arquivos para atualizar, podemos coloca-los numa lista,
+e rodando o programa com o argumento -l, o programa ira automaticamente
+atualizar todos arquivos da lista apontada por -i.
+
+A lista devera estar de acordo com as especificacoes na secao 3.
+
+O campo %1% deve conter o nome do arquivo fonte, e o campo %2%
+deve conter o nome do arquivo alvo.
+
+
+
+3 - Banco de dados.
+
+O banco de dados que o htsite precisa eh muito simples, eh basicamente
+um arquivo de texto comum com os campos separados por TAB e os dados
+separados por ponto-e-virgula(;).
+
+
+3.1 - Funcionamento do banco de dados.
+
+O arquivo texto do banco de dados eh organizado em campos e linhas.
+As linhas sao compostas por campos, os quais devem ser separados por
+TAB(/t).
+Cada linha deve ser separada por ponto-e-virgula, nao eh obrigatorio
+quebra de linha entre as linhas, mas pode ser feita para efeito estetico.
+Os campos sao tratados como strings(sequencia de caracteres) e serao usados
+da mesma forma em que forem disponibilizados no arquivo.
+Cada texto deve ter pelo menos uma linha e cada linha deve ter pelo menos
+um campo.
+
+Exemplo 1:
+campo 1/tcampo 2/tcampo n;
+valor qualquer/tblablablabla/tlero lero!;
+
+No exemplo assima temos 2 linhas com 3 campos cada.
+obs: /t = TAB
+
+
+4 - 'Tag' .
+
+Foi criada uma nova 'tag' para indicar ao htsite quando ele deve interferir na saida.
+A tag  recebe um argumento funcao.
+Deve ser seguido o modelo abaixo:
+
+
+
+Essa tag nao sera impressa, sera impresso apenas o que a funcao chamada
+imprimir.
+
+
+4.1 - Funcao printall.
+
+Uso:
+              printall $ARQUIVO$ "FORMAT STRING"
+
+ARQUIVO: nome de um arquivo texto seguindo o modelo
+
+
+Para cada linha no arquivo de dados ARQUIVO, printall ira
+imprimir FORMAT STRING substituindo as formatacoes de campos.
+
+ARQUIVO deve ser um arquivo texto com o modelo da secao 3.
+
+
+4.2 - Ordem alfabetica.
+
+O htsite eh capaz de ordenar o conteudo na ordem alfabetica.
+basta acrescentar o comando 'ordena' e em seguida o numero
+do campo para se tomar como base.
+
+printall $ordena 2$ $arquivo.txt$ "format string"
+ira ordenar o conteudo de arquivo.txt na ordem alfabetica
+usando o campo %2% como base.
+
+nota: o arquivo nao eh alterado.
+
+
+
+4.3 - Format string de printall.
+
+A formatacao eh composta por '%' e o numero do campo.
+%NUMERO% sera substituido pelo campo que o numero indica.
+Usando o exemplo 1(Secao 3.1):
+
+Linha 1:
+%1% = "campo 1"
+%2% = "campo 2"
+%3% = "campo 3"
+Linha 2:
+%1% = "valor qualquer"
+%2% = "blablablabla"
+%3% = "lero lero!"
+
+Se apresentarmos a string "%1% %2% %3%", sera impresso:
+campo 1 campo 2 campo 3valor qualquer blablablabla lero lero!
+
+Se apresentarmos
+"%1% %2% %3%
+"
+campo 1 campo 2 campo 3
+valor qualquer blablablabla lero lero!
+
+Note que sera pulada uma linha, porque foi pulada uma linha dentro da format string.
+
+
+Para
+"<h1>%1%</h1>
+<h2>%2%</h2>
+<h3> %3%</h3>
+" sera impresso:
+
+<h1>campo 1</h1>
+<h2>campo 2</h2>
+<h3>campo 3</h3>
+<h1>valor qualquer</h1>
+<h2>blablablabla</h2>
+<h3>lero lero!</h3>
+
+%% imprime %
+
+
+5  - Exemplo pratico.
+
+Um exemplo pratico segue em anexo(htsite-X.X.tar.gz)
+index.hts - arquivo fonte
+links.txt - arquivo de dados
+index.txt - arquivo de dados
+images.txt - arquivo de dados
+htsite.txt - arquivo de dados lista
