@@ -1,0 +1,34 @@
+                    ##################################
+                    #       TODO DO FALSE_SHELL      #
+                    #        J@r0d Cyb3rn3tu5        #
+                    ##################################
+
+
+1 - Biblioteca de Apresentacao ( sera usada em outros programas )
+2 - Mensagens de entrada do sistema ( o boot do Linux )
+3 - Tela de Login ( onde se insere senha e login )
+4 - O shell propriamente dito 
+5 - linha de comandos ( linhas de comandos sendo interpretadas pelo sistema
+)
+6 - o comando exit 
+
+-------------------------------------------------------------------------
+###########################################################
+# Implementacoes talvez ainda na primeira versao publica  #
+###########################################################
+
+1 - leitura de arquivos ( simplesmente gravados na memoria durante a
+execucao do programa )
+2 - senhas com uma tabela de criptografia a ser criada ( somente pra
+constar no programa )
+3 - diretorios pre-gravados em um txt 
+
+-------------------------------------------------------------------------
+
+todas as implementacoes poderao estar em algumas das versoes do
+false_shell.
+elas irao sendo marcadas aqui neste TODO e tambem em um changelog proprio
+no diretorio. o diretorio  projetos tambem tem um changelog que sera
+atualizado sempre que o programa possuir alguma atualizacao.
+
+22022002
