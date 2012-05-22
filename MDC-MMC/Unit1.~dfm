@@ -1,0 +1,189 @@
+object Principal: TPrincipal
+  Left = 192
+  Top = 107
+  Width = 615
+  Height = 436
+  Caption = '.:- C'#225'lculo de MMC/MDC -:.'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 361
+    Height = 105
+    Caption = 'N'#250'meros : '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 32
+      Top = 32
+      Width = 67
+      Height = 16
+      Caption = 'N'#250'mero 1 : '
+    end
+    object Label2: TLabel
+      Left = 216
+      Top = 40
+      Width = 67
+      Height = 16
+      Caption = 'N'#250'mero 2 : '
+    end
+    object EditNumber1: TEdit
+      Left = 16
+      Top = 64
+      Width = 121
+      Height = 24
+      TabOrder = 0
+    end
+    object EditNumber2: TEdit
+      Left = 208
+      Top = 64
+      Width = 121
+      Height = 24
+      TabOrder = 1
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Top = 128
+    Width = 361
+    Height = 153
+    Caption = 'Resultados : '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    object Label3: TLabel
+      Left = 16
+      Top = 40
+      Width = 40
+      Height = 16
+      Caption = 'MMC : '
+    end
+    object Label4: TLabel
+      Left = 16
+      Top = 96
+      Width = 39
+      Height = 16
+      Caption = 'MDC : '
+    end
+    object EditMMCResult: TEdit
+      Left = 72
+      Top = 32
+      Width = 281
+      Height = 24
+      TabOrder = 0
+    end
+    object EditMDCResult: TEdit
+      Left = 73
+      Top = 88
+      Width = 280
+      Height = 24
+      TabOrder = 1
+    end
+  end
+  object Panel1: TPanel
+    Left = 8
+    Top = 296
+    Width = 361
+    Height = 73
+    Caption = 'Panel1'
+    TabOrder = 2
+    object Button1: TButton
+      Left = 74
+      Top = 24
+      Width = 75
+      Height = 25
+      Caption = '&Calcular'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 154
+      Top = 24
+      Width = 75
+      Height = 25
+      Caption = '&Zerar'
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 234
+      Top = 24
+      Width = 75
+      Height = 25
+      Caption = '&Sair'
+      TabOrder = 2
+      OnClick = Button3Click
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 390
+    Width = 607
+    Height = 19
+    Panels = <>
+    SimplePanel = False
+  end
+  object GroupBox3: TGroupBox
+    Left = 384
+    Top = 8
+    Width = 209
+    Height = 361
+    Caption = 'Op'#231#245'es : '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    object Image1: TImage
+      Left = 16
+      Top = 112
+      Width = 185
+      Height = 241
+    end
+    object RDMMC: TRadioButton
+      Left = 16
+      Top = 24
+      Width = 113
+      Height = 17
+      Caption = 'MMC'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object RDMDC: TRadioButton
+      Left = 16
+      Top = 48
+      Width = 113
+      Height = 17
+      Caption = 'MDC'
+      TabOrder = 1
+    end
+    object RBAMBOS: TRadioButton
+      Left = 16
+      Top = 72
+      Width = 113
+      Height = 17
+      Caption = 'Ambos'
+      TabOrder = 2
+    end
+  end
+end
