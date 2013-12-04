@@ -81,14 +81,13 @@
 	
 	printf("Copyright (c) 2003\n");
 	printf("Todos os direitos reservados\n");
-	printf("Linux é uma marca registrada por Linus Torvalds\n");
+	printf("Linux e uma marca registrada por Linus Torvalds\n");
 
 	printf("\n");
 	printf("Carregando servicos \n");
 	system("sleep 5");
 
-	printf("Wangtek PC-36/EV-811 cartridge tape controller was found
-	address 00000300H.\n");
+	printf("Wangtek PC-36/EV-811 cartridge tape controller was found address 00000300H.\n");
 
 	printf("\n");
     
@@ -145,7 +144,7 @@
       {
        
 	 char comando[40];
-	 char *diretorio = ' ~ ';
+	 char *diretorio = '~';
          int comando1;
 	 
 	 for(;;)
@@ -181,7 +180,7 @@
 		 case -1073744536 :
 		   printf("\033c");
 		   break;
-		 case   
+		}
 	   }
 	 
       }
